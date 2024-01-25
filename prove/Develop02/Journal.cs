@@ -17,7 +17,6 @@ public class Journal{
         foreach (Entry entry in _entries)
         {
             outputFile.WriteLine(entry.GetEntry());
-            Console.WriteLine("Entry successfully saved.");
         }
     }
     public void LoadFromFile(string filename)
