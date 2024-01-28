@@ -2,10 +2,10 @@ public class Word{
     private string _wordText;
     private string _originalText;
     private bool _hidden;
-    public Word(string WordText, string OriginalText, bool Hidden)
+    public Word(string WordText, bool Hidden)
     {
         _hidden = Hidden;
-        _originalText = OriginalText;
+        _originalText = WordText;
         _wordText = WordText;
     }
     public void HideWord()

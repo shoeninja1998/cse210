@@ -7,13 +7,13 @@ class Program
         bool loop = true;
         Reference reference01 = new("Matthew", 22, 37);
         List<Word> words01 = new(){
-            new("This", "This", false),
-            new("is", "is", false),
-            new("the", "the", false),
-            new("first", "first", false),
-            new("and", "and", false),
-            new("great", "great", false),
-            new("commandment.", "commandment.", false)
+            new("This", false),
+            new("is", false),
+            new("the", false),
+            new("first", false),
+            new("and", false),
+            new("great", false),
+            new("commandment.", false)
         };
         Scripture scripture01 = new(words01, reference01);
         while(loop)
