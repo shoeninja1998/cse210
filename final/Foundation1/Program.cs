@@ -4,38 +4,89 @@ class Program
 {
     static void Main(string[] args)
     {
-        Video video1 = new()
+        List<Video> videos = new()
         {
-            _title = "Curing the Blind",
-            _author = "MrBeast",
-            _length = 600
+            new()
+            {
+                _title = "Curing the Blind",
+                _author = "MrBeast",
+                _length = 600,
+                _comments = new()
+                {
+                    new()
+                    {
+                        _name = "Adventurer91",
+                        _text = "Can't wait for more content like this!"
+                    },
+                    new()
+                    {
+                        _name = "Zephyr",
+                        _text = "Nice"
+                    },
+                    new()
+                    {
+                        _name = "GameMasterPro123",
+                        _text = "nerd"
+                    }
+                }
+            },
+            new()
+            {
+                _title = "Unlocking the Secrets of the Universe",
+                _author = "Celeste Maxwell",
+                _length = 745,
+                _comments = new()
+                {
+                    new()
+                    {
+                        _name = "Adventurer91",
+                        _text = "Can't wait for more content like this!"
+                    },
+                    new()
+                    {
+                        _name = "Zephyr",
+                        _text = "Nice"
+                    },
+                    new()
+                    {
+                        _name = "GameMasterPro123",
+                        _text = "nerd"
+                    }
+                }
+            },
+            new()
+            {
+                _title = "Artificial Intelligence will CHANGE OUR LIVES!",
+                _author = "notarobot",
+                _length = 529,
+                _comments = new()
+                {
+                    new()
+                    {
+                        _name = "Adventurer91",
+                        _text = "Can't wait for more content like this!"
+                    },
+                    new()
+                    {
+                        _name = "Zephyr",
+                        _text = "Nice"
+                    },
+                    new()
+                    {
+                        _name = "GameMasterPro123",
+                        _text = "nerd"
+                    }
+                }
+            }
         };
-        Video video2 = new()
+
+        foreach(Video video in videos)
         {
-            _title = "Unlocking the Secrets of the Universe",
-            _author = "Celeste Maxwell",
-            _length = 745
-        };
-        Video video3 = new()
-        {
-            _title = "Artificial Intelligence will CHANGE OUR LIVES!",
-            _author = "notarobot",
-            _length = 529
-        };
-        Comment comment1 = new()
-        {
-            _name = "Adventurer91",
-            _text = "Can't wait for more content like this!"
-        };
-        Comment comment2 = new()
-        {
-            _name = "Zephyr",
-            _text = "Nice"
-        };
-        Comment comment3 = new()
-        {
-            _name = "GameMasterPro123",
-            _text = "nerd"
-        };
+            video.DisplayVideoInfo();
+            foreach(Comment comment in video._comments)
+            {
+                comment.DisplayComment();
+            }
+        }
     }
 }
