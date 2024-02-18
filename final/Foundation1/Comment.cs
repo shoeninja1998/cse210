@@ -2,8 +2,8 @@ public class Comment
 {
     public string _name;
     public string _text;
-    public string DisplayComment()
+    public void DisplayComment()
     {
-        return $"{_name}: {_text}";
+        Console.WriteLine($"{_name}: {_text}");
     }
 }

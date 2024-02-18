@@ -4,8 +4,8 @@ public class Video
     public string _author;
     public int _length;
     public List<Comment> _comments;
-    public string DisplayVideoInfo()
+    public void DisplayVideoInfo()
     {
-        return $"{_title} by {_author}, {_length}";
+        Console.WriteLine($"{_title} by {_author}, {_length}");
     }
 }
